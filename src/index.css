@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+body {
+  background: #030712;
+  color: white;
+  font-family: Inter, sans-serif;
+}
+
+.gradient {
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
