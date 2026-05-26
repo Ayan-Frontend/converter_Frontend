@@ -13,6 +13,7 @@ export default function Navbar() {
       <div className="flex gap-10 items-center">
         <Link to="/">Home</Link>
 
+        <Link to="/features">Features</Link>
         <Link to="/pricing">Pricing</Link>
 
         <Link to="/dashboard">Dashboard</Link>
