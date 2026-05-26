@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 
 import { Link } from "react-router-dom";
+import HowItWorks from "../components/HowItWorks";
 
 export default function Home() {
   return (
@@ -80,8 +81,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-
-      {/* <Footer /> */}
+      <HowItWorks />
     </div>
   );
 }
