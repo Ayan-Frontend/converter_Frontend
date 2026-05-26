@@ -9,6 +9,7 @@ import ConversionHistory from "./components/ConversionHistory";
 import Toast from "./components/Toast";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import Register from "./pages/Register";
 
 export default function App() {
   return (
@@ -35,6 +36,8 @@ export default function App() {
         {/* LOGIN */}
 
         <Route path="/login" element={<Login />} />
+
+        <Route path="/register" element={<Register />} />
       </Routes>
       <Footer />
     </BrowserRouter>
