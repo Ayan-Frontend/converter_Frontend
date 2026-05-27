@@ -2,7 +2,7 @@ import { useState } from "react";
 import API from "../services/api";
 import Loader from "./Loader";
 import Toast from "./Toast";
-import { FiUploadCloud } from "react-icons/fi";
+import { FiUploadCloud, FiCheckCircle, FiFile } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 export default function UploadZone() {
@@ -12,23 +12,57 @@ export default function UploadZone() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  // const handleConvert = async () => {
+  //   if (!file) {
+  //     setError("Please upload a file");
+  //     return;
+  //   }
+
+  //   const formData = new FormData();
+  //   formData.append("file", file);
+  //   formData.append("format", format);
+
+  //   try {
+  //     setLoading(true);
+  //     setError("");
+  //     const res = await API.post("/convert", formData);
+
+  //     setDownload(res.data.url);
+  //   } catch (err) {
+  //     setError("Conversion failed");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   const handleConvert = async () => {
     if (!file) {
       setError("Please upload a file");
+
       return;
     }
 
-    const formData = new FormData();
-    formData.append("file", file);
-    formData.append("format", format);
-
     try {
       setLoading(true);
+
       setError("");
+
+      const formData = new FormData();
+
+      formData.append("file", file);
+
+      formData.append("format", format);
+
+      // API REQUEST
+
       const res = await API.post("/convert", formData);
+
+      // SAVE DOWNLOAD URL
 
       setDownload(res.data.url);
     } catch (err) {
+      console.log(err);
+
       setError("Conversion failed");
     } finally {
       setLoading(false);
