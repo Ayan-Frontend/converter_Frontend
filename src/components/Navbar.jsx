@@ -19,7 +19,7 @@ export default function Navbar() {
         <Link to="/dashboard">Dashboard</Link>
 
         <Link to="/login" className="gradient px-5 py-2 rounded-xl">
-          Login
+          SignIn
         </Link>
       </div>
     </div>
