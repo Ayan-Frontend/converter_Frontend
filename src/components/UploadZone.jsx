@@ -251,6 +251,30 @@ export default function UploadZone() {
             </label>
 
             <select
+              value={format}
+              onChange={(e) => setFormat(e.target.value)}
+              className="..."
+            >
+              <optgroup label="Documents">
+                <option value="pdf">PDF</option>
+
+                <option value="docx">DOCX</option>
+
+                <option value="txt">TXT</option>
+
+                <option value="html">HTML</option>
+              </optgroup>
+
+              <optgroup label="Images">
+                <option value="png">PNG</option>
+
+                <option value="jpg">JPG</option>
+
+                <option value="webp">WEBP</option>
+              </optgroup>
+            </select>
+
+            {/* <select
               className="
             w-full
             mt-4
@@ -273,7 +297,7 @@ export default function UploadZone() {
               <option value="jpg">JPG Image</option>
 
               <option value="png">PNG Image</option>
-            </select>
+            //</select> */}
           </div>
 
           {/* BUTTON */}
