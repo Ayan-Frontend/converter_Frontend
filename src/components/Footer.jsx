@@ -49,7 +49,7 @@ export default function Footer() {
               <div className="flex gap-4 text-2xl">
                 <a
                   className="glass p-4 rounded-2xl hover:scale-110 transition"
-                  href="https://github.com/Ayan-Frontend/converter_Frontend"
+                  href="https://github.com/Ayan-Frontend"
                   target="_blank"
                 >
                   <FaGithub />
